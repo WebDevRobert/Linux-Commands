@@ -1,0 +1,13 @@
+# The following command prints the result of a calculation.
+# For a given number range, add to number and print results to a file.
+perl -e 'for(RANGESTART..RANGESTOP){$x = $_ + 0; print "$x" . "','\n";}' > filename.csv
+
+# Example
+perl -e 'for(100..199){$x = $_ * time(); print "$x" . "','\n";}' > file-name-1.csv
+
+# The following command detects duplicate entries in a given file, removes all duplicates and re-writes results to same file.
+sort -u -o file-name-2.csv file-name-1.csv
+
+# The following command creates even (evenfile.csv) & odd (oddfile.csv) .csv files from a given file.
+# For a given file, create 2 files, one containing odd entries, one containing even entries.
+awk '{print>sprintf("%sfile.csv",NR%2?"even":"odd",PROCINFO["pid"])}' file-name-2.csv
