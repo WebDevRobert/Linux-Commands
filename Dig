@@ -1,0 +1,13 @@
+# dig is a tool used to obtain information about host addresses, mail exchanges, nameservers, and related information, from DNS nameservers.
+# dig can be used from any Linux (Unix) or Macintosh OS X operating system and is typically used to query a single host.
+
+# display the contents of the cname: tawk1._domainkey text file for the domain.tld
+dig tawk1._domainkey.domain.tld txt
+
+# display the contents of the cname: tawk1._domainkey text file for the domain.tld
+dig tawk2._domainkey.domain.tld txt
+
+## display the contents of text file for the domain.tld
+dig domain.tld txt
+
+# Most of the information above was learned from: https://mediatemple.net/community/products/dv/204644130/understanding-the-dig-command
