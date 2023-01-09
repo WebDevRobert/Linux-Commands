@@ -1,0 +1,22 @@
+# Type the following command at the Apple Terminal Command Prompt:
+sudo pico .config/lxsession/LXDE-pi/autostart
+
+### Copy/Paste below in autostart file ###
+
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+
+### Changed 20230109 - WEBDEVROBERT ###
+### @xscreensaver -no-splash ###
+
+### BEGIN ADDED ###
+
+### @unclutter # not installed ###
+@xset s off
+@xset s noblank
+@xset -dpms
+
+# Browser 1
+@/usr/bin/chromium-browser --check-for-update-interval=31536000 --incognito --kiosk URI
+
+### END ADDED ###
